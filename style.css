@@ -31,17 +31,6 @@ h1 {
   margin-bottom: 2rem;
 }
 
-.input {
-  width: 100%;
-  padding: 1rem;
-  margin: 0.5rem 0;
-  border: 1px solid #334155;
-  border-radius: 0.5rem;
-  background: #1e293b;
-  color: white;
-  font-size: 1rem;
-}
-
 .btn {
   padding: 0.75rem 1.5rem;
   border: none;
@@ -54,6 +43,12 @@ h1 {
 .btn.primary {
   background: linear-gradient(to right, #22c55e, #16a34a);
   color: white;
+}
+
+.btn.secondary {
+  background: #4b5563;
+  color: white;
+  margin-top: 1rem;
 }
 
 .btn.small {
@@ -70,6 +65,19 @@ h1 {
   background: #475569;
   cursor: not-allowed;
 }
+
+.btn.google {
+  background: white;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.btn.google:hover { background: #f8f9fa; }
 
 .error {
   color: #f87171;
@@ -158,21 +166,6 @@ h1 {
   border-bottom: 2px solid #22c55e;
   color: #22c55e;
   font-weight: bold;
-}
-
-.filters {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-  background: #1e293b;
-}
-
-.select {
-  background: #334155;
-  color: white;
-  border: none;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
 }
 
 .player-list {
@@ -271,6 +264,11 @@ h1 {
   color: black;
 }
 
+.add-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .fixed-bottom {
   position: fixed;
   bottom: 0;
@@ -283,7 +281,10 @@ h1 {
 
 .modal {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: rgba(0,0,0,0.8);
   display: flex;
   align-items: center;
@@ -339,32 +340,13 @@ h1 {
 .c-btn { background: #eab308; color: black; }
 .vc-btn { background: #fb923c; color: black; }
 
+.c-btn.active { background: #facc15; }
+.vc-btn.active { background: #fdba74; }
+
 .text-center { text-align: center; }
-.live-points {
-  background: #22c55e;
-  color: black;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+.timer {
   text-align: center;
-  margin-bottom: 1rem;
-}
-
-.leaderboard-list {
-  max-height: 60vh;
-  overflow-y: auto;
-}
-
-.leaderboard-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.75rem;
+  padding: 1rem;
   background: #1e293b;
-  border-radius: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.leaderboard-item .points {
-  font-weight: bold;
-  color: #22c55e;
+  border-top: 1px solid #334155;
 }

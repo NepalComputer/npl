@@ -340,3 +340,31 @@ h1 {
 .vc-btn { background: #fb923c; color: black; }
 
 .text-center { text-align: center; }
+.live-points {
+  background: #22c55e;
+  color: black;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.leaderboard-list {
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.leaderboard-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background: #1e293b;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.leaderboard-item .points {
+  font-weight: bold;
+  color: #22c55e;
+}

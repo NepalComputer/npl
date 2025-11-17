@@ -1,9 +1,13 @@
 // Firebase Config
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  appId: "YOUR_APP_ID"
+   apiKey: "AIzaSyCBwA6F75b7gJvL_gsL68AE6xAYzQeDeUk",
+  authDomain: "npl-fantasy.firebaseapp.com",
+  databaseURL: "https://npl-fantasy-default-rtdb.firebaseio.com",
+  projectId: "npl-fantasy",
+  storageBucket: "npl-fantasy.firebasestorage.app",
+  messagingSenderId: "52802710790",
+  appId: "1:52802710790:web:315b07fb7c97fa8ba8c287",
+  measurementId: "G-YKBTXSYMEK"
 };
 
 firebase.initializeApp(firebaseConfig);
@@ -233,6 +237,9 @@ function renderPreview() {
       .filter(p => getPlayer(p).role === role)
       .map(name => {
         const p = getPlayer(name);
+        const isCaptain = captain === name;
+        const isViceCaptain = viceCaptain === name;
+
         return `
           <div class="preview-player">
             <div style="display:flex; align-items:center; gap:0.75rem;">
@@ -245,8 +252,8 @@ function renderPreview() {
               </div>
             </div>
             <div style="display:flex; gap:0.5rem;">
-              <button class="cvc-btn c-btn ${captain === p.name ? 'active' : ''}" data-name="${p.name}" data-type="c">C</button>
-              <button class="cvc-btn vc-btn ${viceCaptain === p.name ? 'active' : ''}" data-name="${p.name}" data-type="vc">VC</button>
+              <button class="cvc-btn c-btn ${isCaptain ? 'active' : ''}" data-name="${name}" data-type="c">C</button>
+              <button class="cvc-btn vc-btn ${isViceCaptain ? 'active' : ''}" data-name="${name}" data-type="vc">VC</button>
             </div>
           </div>
         `;
